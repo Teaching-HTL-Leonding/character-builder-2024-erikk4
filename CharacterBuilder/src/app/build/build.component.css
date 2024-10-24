@@ -1,0 +1,73 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7f9;
+  padding: 20px;
+}
+
+h1 {
+  color: black; /* Keep the heading blue */
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 1.2rem;
+  color: #000000; /* Set label text color to black */
+  margin-bottom: 10px;
+  display: block; /* Make labels block elements to ensure they are above inputs */
+}
+
+/* Styling the select elements and ensuring they are the same size */
+select, input[type="checkbox"] {
+  font-size: 1rem;
+  padding: 8px;
+  border: 2px solid #000000; /* Set the border color to black */
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #000000; /* Set the input text color to black */
+  outline: none;
+  margin-bottom: 20px;
+  width: 100%; /* Set all select elements and checkboxes to full width */
+  max-width: 400px; /* Optionally set a maximum width to control size */
+  box-sizing: border-box; /* Ensure padding and borders are included in the element's width */
+}
+
+/* Styling for checkboxes to align them with the label, even though they are full width */
+input[type="checkbox"] {
+  width: auto; /* Reset checkbox width */
+  transform: scale(1.2);
+  margin-right: 10px;
+  vertical-align: middle; /* Align checkbox vertically with the label */
+}
+
+input[type="checkbox"]:checked {
+  accent-color: #0056b3; /* Keep checkbox checkmark blue */
+}
+
+/* Styling buttons */
+button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff; /* Keep button background blue */
+  color: #ffffff; /* Button text stays white */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  max-width: 400px; /* Same max width as the select elements */
+  margin-left: 20px; /* Align button to the right */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darken button on hover */
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 600px) {
+  select, button, label, input[type="checkbox"] {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}

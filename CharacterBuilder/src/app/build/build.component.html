@@ -1,0 +1,51 @@
+<h1>Character Builder</h1>
+
+<label for="eye">Eye:</label>
+<select id="eye" name="eye" [(ngModel)]="eye">
+  <option value="NoEye">No Eye</option>
+  <option value="HalfOpen">Half Open</option>
+  <option value="Closed">Closed</option>
+  <option value="Open">Open</option>
+</select>
+
+<br>
+
+<input
+  type="checkbox"
+  id="hasHammer"
+  name="hasHammer"
+  [(ngModel)]="hasHammer"
+/>
+<label for="hasHammer">Has Hammer</label>
+
+<label for="mouth">Mouth:</label>
+<select id="mouth" name="mouth" [(ngModel)]="mouth">
+  <option value="NoMouth">No Mouth</option>
+  <option value="Happy">Happy</option>
+  <option value="Normal">Normal</option>
+  <option value="Unhappy">Unhappy</option>
+</select>
+
+<label for="rightHand" class="form-label">Right Hand:</label>
+<select id="rightHand" name="rightHand" [(ngModel)]="rightHand">
+  <option value="NoHand">No Hand</option>
+  <option value="Normal">Normal</option>
+  <option value="Victory">Victory</option>
+</select>
+
+<br>
+
+<input
+  type="checkbox"
+  id="hasTail"
+  name="hasTail"
+  [(ngModel)]="hasTail"
+/>
+<label for="hasTail">Has Tail</label>
+
+<button (click)="buildImage()">Build Image</button>
+<button (click)="buildRandomImage()">Feeling lucky ...</button>
+
+@if (imageUrl()) {
+  <img [src]="imageUrl() + '?scale=0.5'">
+}
